@@ -16,6 +16,7 @@ function merge(left, right) {
     var lastRightIndex = right.length - 1;
 
     while (leftPointer <= lastLeftIndex && rightPointer <= lastRightIndex) {
+        console.log(leftPointer, lastLeftIndex, rightPointer, lastRightIndex);
         if (left[leftPointer] < right[rightPointer]) {
             result.push(left[leftPointer]);
             leftPointer ++;
@@ -26,11 +27,13 @@ function merge(left, right) {
     }
 
     if (leftPointer > lastLeftIndex) {
-        result = result.concat(right);
+        console.log(result, 'result');
+        result = result.concat(right.slice(rightPointer));
         return result;
     } 
     if (rightPointer > lastRightIndex) {
-        result = result.concat(left);
+        console.log(result, 'result');
+        result = result.concat(left.slice(leftPointer));
         return result;
     }
 
