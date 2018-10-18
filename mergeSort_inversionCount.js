@@ -44,6 +44,10 @@ InversionCount.prototype.merge = function (left, right){
     return result;
 }
 
-var ic = new InversionCount()
-console.log(ic.mergeSort([4,6,5,8,3,9]));
-console.log(ic.inversionCount, 'inversionCount');
+// var ic = new InversionCount()
+// console.log(ic.mergeSort([4,6,5,8,3,9]));
+// console.log(ic.inversionCount, 'inversionCount');
+
+module.exports = {
+    inversionCountClass: InversionCount
+}
